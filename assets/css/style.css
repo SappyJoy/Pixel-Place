@@ -1,0 +1,253 @@
+@font-face {
+    font-family: 'FR73';
+    src: url('FR73_Pixel_W00_Regular.eot'); /* IE9 Compat Modes */
+    src: url('FR73_Pixel_W00_Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('FR73_Pixel_W00_Regular.woff') format('woff'), /* Modern Browsers */
+    url('FR73_Pixel_W00_Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+    url('FR73_Pixel_W00_Regular.svg#fr73') format('svg'); /* Legacy iOS */
+}
+
+:root {
+    font-size: 16px;
+    font-family: FR73, "Droid Sans Fallback", sans-serif;
+    --white: #f2f0e5;
+    --light-grey: #b8b5b9;
+    --grey: #868188;
+    --dark-grey: #646365;
+    --dark-grey-2: #45444f;
+    --main-blue: #3a3858;
+    --black: #212123;
+    --dark-purple: #352b42;
+    --light-purple: #43436a;
+    --blue: #4b80ca;
+    --light-blue: #68c2d3;
+    --sky: #a2dcc7;
+    --skin: #ede19e;
+    --orange: #d3a068;
+    --purple: #6a536e;
+    --dark-purple-2: #4b4158;
+    --brown: #80493a;
+    --light-brown: #a77b5b;
+    --too-light-brown: #e5ceb4;
+    --bright-green: #c2d368;
+    --yellow: #b2b47e;
+    --red: #b45252;
+    --green: #8ab060;
+    --blue-green: #567b79;
+    --dark-green: #4e584a;
+    --marsh: #7b7243;
+    --light-marsh: #b2b47e;
+    --light-pink: #edc8c4;
+    --pink: #cf8acb;
+    --grey-purple: #5f556a;
+}
+
+* {
+    box-sizing: border-box;
+    cursor: url("../img/cursor.png"), auto;
+}
+
+a {
+    cursor: url("../img/pointer.png"), auto;
+}
+
+html {
+    min-width: 600px;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: var(--dark-grey-2);
+}
+
+/*
+
+    Header
+
+*/
+
+header {
+    position: relative;
+    border: 2px solid var(--main-blue);
+    border-radius: 10px;
+    background-color: var(--grey);
+    margin-bottom: 2rem;
+}
+
+.logo {
+    overflow: hidden;
+    padding: 0.5rem;
+}
+
+.logo .title, .subtitle {
+    padding: 0.4rem;
+}
+
+.logo .title img {
+    width:30%;
+    height:auto;
+    image-rendering: pixelated;
+}
+
+header .login {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+}
+
+header .login a {
+    text-decoration: none;
+    color: var(--orange);
+}
+
+header .nav {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    /*margin: 0.5rem auto;*/
+}
+
+header .nav ul {
+}
+
+header .nav ul li {
+    display: inline-block;
+}
+
+ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: FR73, sans-serif;
+    color: var(--dark-grey-2);
+    margin-right: 1rem;
+}
+
+a:hover {
+    color: var(--red) !important;
+}
+
+/*
+
+    Middle
+
+*/
+
+/* Clear floats after the columns */
+.middle:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#sidebar {
+    position: sticky;
+    top: 1rem;
+    z-index: 10;
+    overflow: hidden;
+    padding: 1rem;
+    float: right;
+    width: 20%;
+    border: 2px dashed var(--main-blue);
+    border-radius: 10px;
+    background-color: var(--main-blue);
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 20%;
+    float: right;
+}
+
+.middle aside .body ul li a {
+    color: var(--grey);
+}
+
+.middle aside .body ul li {
+    margin-bottom: .3rem;
+    list-style-type: square;
+}
+
+.middle aside .footer {
+    float: right;
+}
+
+.middle aside .footer a {
+    color: var(--yellow);
+    text-decoration: none;
+}
+
+.middle main {
+
+}
+
+.middle main .post {
+    border: 2px solid var(--main-blue);
+    border-radius: 10px;
+    background-color: var(--grey);
+    width: 75%;
+    margin: 1rem;
+}
+
+.middle main .post .header {
+    padding: 1rem;
+    border-bottom: 2px solid var(--main-blue);
+    width: 100%;
+}
+
+.middle main .post .header>.title {
+    color: var(--bright-green);
+    font-size: 28px;
+    margin-bottom: .5rem;
+}
+
+.middle main .post .tags {
+    position: relative;
+}
+
+.middle main .post .tags li {
+    display: inline-block;
+}
+
+.middle main .post .tags li a:before {
+    content: "#";
+}
+
+.middle main .post .tags li a {
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: FR73, sans-serif;
+    color: var(--dark-grey-2);
+    margin-right: 0.5rem;
+}
+
+.post .palette .title:before {
+    content: "Pallete :";
+    text-transform: uppercase;
+    color: var(--purple);
+}
+
+.post .palette .title {
+    color: var(--sky);
+}
+
+.picture {
+    width:90%;
+    height:auto;
+    image-rendering: pixelated;
+    /*background-color: var(--white);*/
+    display: block;
+    margin: 1rem auto;
+}
+
+.middle main .post .bottom {
+    padding: 1rem;
+}
+
+footer {
+    border-top: 2px solid var(--main-blue);
+    margin: 4em auto;
+    padding: 2em;
+    text-align: center;
+}
